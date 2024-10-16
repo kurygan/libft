@@ -1,20 +1,29 @@
 CC = cc
 FLAGS = -Wall -Wextra -Werror
-SRCS = ft_putstr.c	\
-		ft_strlen.c	\
-		main.c		\
+
+SRCS = ft_putstr.c ft_strlen.c
+
 OBJS = $(SRCS:.c=.o)
 OBJS_DIR = obj/
 OBJS_PREF = $(addprefix $(OBJS_DIR), $(OBJS))
 
-%.o: %.c libft.h
-	cc $(FLAGS) -c $< -o $@
+NAME = libft.a
 
-all: main
+$(OBJS_DIR)%.o: %.c libft.h
+	@mkdir -p $(OBJS_DIR)
+	@echo "Compilings objects..."
+	@cc $(FLAGS) -c $< -o $@
 
-main: $(OBJS)
-	$(CC) $(FLAGS) $(OBJS) -o main.out
+all: $(NAME)
 
+$(NAME): $(OBJS_PREF)
+	@ar r $(NAME) $(OBJS_PREF)
+	@echo "Libft.a compiled"
 
-# clean:
-# 	rm -rf ft_putstr.o ft_strlen.o main.o main.out
+clean:
+	rm -rf $(OBJS_DIR)
+
+fclean: clean
+	rm -f $(NAME)
+
+re: fclean all
