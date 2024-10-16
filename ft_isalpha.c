@@ -1,22 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tylerlover911 <tylerlover911@student.42    +#+  +:+       +#+        */
+/*   By: kurygan <kurygan@student.42.fr>            #+#  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/14 21:36:40 by tylerlover9       #+#    #+#             */
-/*   Updated: 2024/10/14 21:41:27 by tylerlover9      ###   ########.fr       */
+/*   Created: 2024-10-16 10:11:30 by kurygan           #+#    #+#             */
+/*   Updated: 2024-10-16 10:11:30 by kurygan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include <ctype.h>
+#include <stdio.h>
 
-void	ft_putstr(char *str)
+int	ft_isalpha(int c)
 {
-	while (*str)
-	{
-		write(1, str, 1);
-		str++;
-	}
+	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
+		return 1;
+	else
+		return 0;
+}
+
+int	main(){
+	char c = 'h';
+
+	printf("%d\n", isalpha(c));
+	printf("%d", ft_isalpha(c));
+	return 0;
 }

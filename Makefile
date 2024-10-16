@@ -1,7 +1,8 @@
 CC = cc
 FLAGS = -Wall -Wextra -Werror
+TEST = ft_isalpha.c
 
-SRCS = ft_putstr.c ft_strlen.c
+SRCS = ft_isalpha.c ft_strlen.c
 
 OBJS = $(SRCS:.c=.o)
 OBJS_DIR = obj/
@@ -14,16 +15,20 @@ $(OBJS_DIR)%.o: %.c libft.h
 	@echo "Compilings objects..."
 	@cc $(FLAGS) -c $< -o $@
 
-all: $(NAME)
-
 $(NAME): $(OBJS_PREF)
 	@ar r $(NAME) $(OBJS_PREF)
 	@echo "Libft.a compiled"
+
+all: $(NAME)
 
 clean:
 	rm -rf $(OBJS_DIR)
 
 fclean: clean
 	rm -f $(NAME)
+
+test: $(TEST)
+	@cc $(TEST) -o test.out
+	@./test.out
 
 re: fclean all
