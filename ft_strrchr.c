@@ -1,24 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tylerlover911 <tylerlover911@student.42    +#+  +:+       +#+        */
+/*   By: mkettab <mkettab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/14 14:28:17 by tylerlover9       #+#    #+#             */
-/*   Updated: 2024/10/17 20:00:05 by mkettab          ###   ########.fr       */
+/*   Created: 2024/10/17 19:14:34 by mkettab           #+#    #+#             */
+/*   Updated: 2024/10/17 21:38:44 by mkettab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(const char *s)
-{
-	int	i;
+#include <stdlib.h>
+#include <string.h>
 
-	i = 0;
+char *ft_strrchr(const char *s, int c)
+{
+	char *last_occ = NULL;
+
 	while (*s)
 	{
-		i++;
+		if (*s == c)
+		{
+			last_occ = (char *)s;
+		}
 		s++;
 	}
-	return (i);
+	if (c == 0)
+		return 0;
+	if (last_occ != NULL)
+		return last_occ;
+	return (NULL);
 }
