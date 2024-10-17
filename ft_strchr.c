@@ -1,23 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mkettab <mkettab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/16 15:08:04 by mkettab           #+#    #+#             */
-/*   Updated: 2024/10/16 18:33:58 by mkettab          ###   ########.fr       */
+/*   Created: 2024/10/16 22:17:30 by mkettab           #+#    #+#             */
+/*   Updated: 2024/10/17 19:05:30 by mkettab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include <stdio.h>
+#include <string.h>
 
-int	ft_strlen(char *str);
-int	ft_isalpha(int c);
-int	ft_isdigit(int c);
-int	ft_isalnum(int c);
-int	ft_isascii(int c);
-int	ft_isprint(int c);
+char	*ft_strchr(const char *str, int c)
+{
+	char	*ptr;
 
-#endif
+	ptr = (char *)str;
+	while (*ptr)
+	{
+		if (*ptr == c)
+			return (ptr);
+		ptr++;
+	}
+	if (*ptr == c)
+		return (ptr);
+	return (NULL);
+}

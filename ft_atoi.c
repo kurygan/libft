@@ -1,23 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mkettab <mkettab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/16 15:08:04 by mkettab           #+#    #+#             */
-/*   Updated: 2024/10/16 18:33:58 by mkettab          ###   ########.fr       */
+/*   Created: 2024/10/17 18:25:12 by mkettab           #+#    #+#             */
+/*   Updated: 2024/10/17 19:05:44 by mkettab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+int	ft_atoi(const char *str)
+{
+	int	sign;
+	int	index;
+	int	result;
 
-int	ft_strlen(char *str);
-int	ft_isalpha(int c);
-int	ft_isdigit(int c);
-int	ft_isalnum(int c);
-int	ft_isascii(int c);
-int	ft_isprint(int c);
-
-#endif
+	sign = 1;
+	result = 0;
+	if (*str == '-')
+	{
+		sign = -sign;
+		str++;
+	}
+	while (*str >= '0' && *str <= '9')
+	{
+		index = *str - '0';
+		result = (result * 10) + index;
+		str++;
+	}
+	return (result * sign);
+}
