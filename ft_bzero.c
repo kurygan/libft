@@ -1,30 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mkettab <mkettab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/18 22:00:36 by mkettab           #+#    #+#             */
-/*   Updated: 2024/10/19 01:25:47 by mkettab          ###   ########.fr       */
+/*   Created: 2024/10/19 01:34:15 by mkettab           #+#    #+#             */
+/*   Updated: 2024/10/19 01:36:14 by mkettab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-int	ft_memcmp(const void *s1, const void *s2, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
-	unsigned char *char_s1 = (unsigned char *)s1;
-	unsigned char *char_s2 = (unsigned char *)s2;
-	size_t i;
-
+	size_t	i;
+	unsigned char	*ptr;
+	
 	i = 0;
-	if(n == 0)
-		return (0);
-	while (char_s1[i] && char_s2[i] && *char_s1 == *char_s2 && i < n - 1)
+	ptr = (unsigned char *)s;
+	while(ptr[i] && i < n)
 	{
-		char_s1++;
-		char_s2++;
+		ptr[i] = 0;
+		i++;
 	}
-	return (*char_s1 - *char_s2);
 }
