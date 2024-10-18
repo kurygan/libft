@@ -6,24 +6,13 @@
 /*   By: mkettab <mkettab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 02:46:36 by mkettab           #+#    #+#             */
-/*   Updated: 2024/10/18 18:16:54 by mkettab          ###   ########.fr       */
+/*   Updated: 2024/10/19 00:43:54 by mkettab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <stdio.h>
-
-size_t	ft_strlen(const char *s)
-{
-	size_t	i;
-
-	i = 0;
-	while (s[i])
-	{
-		i++;
-	}
-	return (i);
-}
+#include "libft.h"
 
 char	*verif_chars(
 	char *haystack, char *needle,
@@ -67,10 +56,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	if (len_needle > len_haystack)
 		return (NULL);
 	result = verif_chars(char_haystack, char_needle, len_needle, len);
-	if (result == NULL)
-		return (NULL);
-	else
-		return (result);
+	return (result);
 }
 
 /*int main(){

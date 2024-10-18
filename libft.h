@@ -6,12 +6,14 @@
 /*   By: mkettab <mkettab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 15:08:04 by mkettab           #+#    #+#             */
-/*   Updated: 2024/10/18 19:54:57 by mkettab          ###   ########.fr       */
+/*   Updated: 2024/10/19 00:42:43 by mkettab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+
+#include <stdlib.h>
 
 size_t	ft_strlen(const char *s);
 int		ft_isalpha(int c);
