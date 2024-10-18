@@ -1,6 +1,6 @@
 CC = cc
 FLAGS = -Wall -Wextra -Werror
-TEST = ft_strnstr.c
+TEST = ft_memset.c
 
 SRCS = ft_strnstr.c ft_strncmp.c ft_strchr.c ft_atoi.c ft_toupper.c ft_tolower.c ft_isascii.c ft_isprint.c ft_isdigit.c ft_isalnum.c ft_isalpha.c ft_strlen.c
 
@@ -16,7 +16,8 @@ $(OBJS_DIR)%.o: %.c libft.h
 	@echo "Compiling $@"
 
 $(NAME): $(OBJS_PREF)
-	@ar r $(NAME) $(OBJS_PREF)
+	@echo "Archive Created"
+	@ar rcs $(NAME) $(OBJS_PREF)
 
 all: $(NAME)
 
