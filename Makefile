@@ -46,8 +46,8 @@ fclean: clean
 	@echo "Cleaning.."
 
 test: $(TEST)
-	@cc $(FLAGS) $(TEST) -o $(TEST:.c=.out)
-	@./$(TEST:.c=.out)
-	@rm -rf ./$(TEST:.c=.out)
+	@cc $(FLAGS) $(TEST) -o $(TEST:.c=)
+	@./$(TEST:.c=)
+	@rm -rf ./$(TEST:.c=)
 
 re: fclean all
