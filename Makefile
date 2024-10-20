@@ -1,6 +1,6 @@
 CC = cc
 FLAGS = -Wall -Wextra -Werror
-TEST = ft_memchr.c
+TEST = ft_memcpy.c
 
 SRCS = ft_strnstr.c \
 			 ft_strncmp.c \
@@ -17,7 +17,8 @@ SRCS = ft_strnstr.c \
 			 ft_memset.c \
 			 ft_memchr.c \
 			 ft_memcmp.c \
-			 ft_bzero.c
+			 ft_bzero.c \
+			 ft_memcpy.c
 
 OBJS = $(SRCS:.c=.o)
 OBJS_DIR = obj/
@@ -45,8 +46,8 @@ fclean: clean
 	@echo "Cleaning.."
 
 test: $(TEST)
-	@cc $(FLAGS) $(TEST) -o test.out
-	@./test.out
-	@rm -rf ./test.out
+	@cc $(FLAGS) $(TEST) -o $(TEST:.c=.out)
+	@./$(TEST:.c=.out)
+	@rm -rf ./$(TEST:.c=.out)
 
 re: fclean all

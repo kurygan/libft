@@ -6,7 +6,7 @@
 /*   By: mkettab <mkettab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 15:08:04 by mkettab           #+#    #+#             */
-/*   Updated: 2024/10/19 01:41:27 by mkettab          ###   ########.fr       */
+/*   Updated: 2024/10/20 17:03:58 by mkettab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,6 @@ void	*ft_memset(void *s, int c, size_t n);
 void	*ft_memchr(const void *s, int c, size_t n);
 void	*ft_memcmp(const void *s1, const void *s2, size_t n);
 void	ft_bzero(void *s, size_t n);
+void	*ft_memcpy(void *dst, const void *src, size_t n);
 
 #endif
