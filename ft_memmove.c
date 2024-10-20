@@ -1,32 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mkettab <mkettab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/19 01:49:04 by mkettab           #+#    #+#             */
-/*   Updated: 2024/10/20 20:45:13 by mkettab          ###   ########.fr       */
+/*   Created: 2024/10/20 18:53:32 by mkettab           #+#    #+#             */
+/*   Updated: 2024/10/20 22:52:12 by mkettab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
+#include "libft.h"
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	unsigned char	*ptr_src;
 	unsigned char	*ptr_dst;
+	unsigned char	*ptr_src;
 	size_t			i;
 
-	ptr_src = (unsigned char *)src;
 	ptr_dst = (unsigned char *)dst;
+	ptr_src = (unsigned char *)src;
 	i = 0;
-	if (ptr_src == NULL && ptr_dst == NULL)
-		return (NULL);
-	while (ptr_src[i] && i < n)
+	if (dst == src || len == 0)
+		return (ptr_dst);
+	if (dst > src)
 	{
-		ptr_dst[i] = ptr_src[i];
-		i++;
+		i = len - 1;
+		while (i >= 0 && ptr_src[i])
+		{
+			ptr_dst[i] = ptr_src[i];
+			i--;
+		}
 	}
+	else
+		ft_memcpy(ptr_dst, ptr_src, len);
 	return (ptr_dst);
 }

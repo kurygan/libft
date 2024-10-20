@@ -1,6 +1,6 @@
 CC = cc
 FLAGS = -Wall -Wextra -Werror
-TEST = ft_memcpy.c
+TEST = ft_memmove.c
 
 SRCS = ft_strnstr.c \
 			 ft_strncmp.c \
@@ -18,7 +18,8 @@ SRCS = ft_strnstr.c \
 			 ft_memchr.c \
 			 ft_memcmp.c \
 			 ft_bzero.c \
-			 ft_memcpy.c
+			 ft_memcpy.c \
+			 ft_memmove.c
 
 OBJS = $(SRCS:.c=.o)
 OBJS_DIR = obj/
