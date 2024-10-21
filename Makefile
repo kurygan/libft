@@ -1,6 +1,6 @@
 CC = cc
 FLAGS = -Wall -Wextra -Werror
-TEST = ft_memmove.c
+TEST = ft_strdup.c
 
 SRCS = ft_strnstr.c \
 			 ft_strncmp.c \
@@ -21,7 +21,8 @@ SRCS = ft_strnstr.c \
 			 ft_memcpy.c \
 			 ft_memmove.c \
 			 ft_strlcpy.c \
-			 ft_calloc.c
+			 ft_calloc.c \
+			 ft_strdup.c
 
 OBJS = $(SRCS:.c=.o)
 OBJS_DIR = obj/
@@ -48,8 +49,8 @@ fclean: clean
 	@rm -f $(NAME)
 	@echo "Cleaning.."
 
-test: $(TEST)
-	@cc $(FLAGS) $(TEST) -o $(TEST:.c=)
+test: all $(TEST)
+	@cc $(FLAGS) $(TEST) libft.a -o $(TEST:.c=)
 	@./$(TEST:.c=)
 	@rm -rf ./$(TEST:.c=)
 
