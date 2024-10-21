@@ -6,7 +6,7 @@
 /*   By: mkettab <mkettab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 04:16:24 by mkettab           #+#    #+#             */
-/*   Updated: 2024/10/21 04:28:36 by mkettab          ###   ########.fr       */
+/*   Updated: 2024/10/21 19:10:48 by mkettab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 char	*ft_strdup(const char *s1)
 {
 	char	*strduped;
-	int i;
+	int		i;
 
 	strduped = malloc(sizeof(char) * ft_strlen(s1) + 1);
 	if (!strduped)
@@ -31,10 +31,3 @@ char	*ft_strdup(const char *s1)
 	strduped[i] = 0;
 	return (strduped);
 }
-
-/* int main(){
-	char str[] = "Hello, World!";
-
-	char *dest = ft_strdup(str);
-	printf("%s\n", dest);
-} */
