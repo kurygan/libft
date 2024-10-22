@@ -6,7 +6,7 @@
 /*   By: mkettab <mkettab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/19 01:49:04 by mkettab           #+#    #+#             */
-/*   Updated: 2024/10/20 20:45:13 by mkettab          ###   ########.fr       */
+/*   Updated: 2024/10/21 21:21:05 by mkettab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,18 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	i = 0;
 	if (ptr_src == NULL && ptr_dst == NULL)
 		return (NULL);
-	while (ptr_src[i] && i < n)
+	while (i < n)
 	{
 		ptr_dst[i] = ptr_src[i];
 		i++;
 	}
 	return (ptr_dst);
 }
+
+/* int main(){
+	void *mem = malloc(30);
+	if (!mem)
+		return EXIT_FAILURE;
+	mem = ft_memcpy(mem, "zy\0xw\0vu\0\0tsr", 11);
+	return EXIT_SUCCESS;
+} */

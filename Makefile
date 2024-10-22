@@ -23,7 +23,8 @@ SRCS = ft_strnstr.c \
 			 ft_strlcpy.c \
 			 ft_calloc.c \
 			 ft_strdup.c \
-			 ft_strlcat.c
+			 ft_strlcat.c \
+			 ft_strrchr.c
 
 OBJS = $(SRCS:.c=.o)
 OBJS_DIR = obj/
