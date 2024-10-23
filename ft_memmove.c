@@ -6,7 +6,7 @@
 /*   By: mkettab <mkettab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/20 18:53:32 by mkettab           #+#    #+#             */
-/*   Updated: 2024/10/22 02:27:47 by mkettab          ###   ########.fr       */
+/*   Updated: 2024/10/23 02:57:57 by mkettab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	unsigned char	*ptr_dst;
 	unsigned char	*ptr_src;
-	size_t			i;
+	int			i;
 
 	ptr_dst = (unsigned char *)dst;
 	ptr_src = (unsigned char *)src;
@@ -26,8 +26,8 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 		return (ptr_dst);
 	if (dst > src)
 	{
-		i = len - 1;
-		while (i >= 0 && ptr_src[i])
+		i = (int)len - 1;
+		while (i >= 0)
 		{
 			ptr_dst[i] = ptr_src[i];
 			i--;
@@ -37,3 +37,12 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 		ft_memcpy(ptr_dst, ptr_src, len);
 	return (ptr_dst);
 }
+/* 
+int main(){
+	char src[] = "lorem ipsum dolor sit amet";
+	char *dest;
+	
+	dest = src + 1;
+	dest = ft_memmove(dest, "consectetur", 5);
+	return EXIT_SUCCESS;
+} */
