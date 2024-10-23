@@ -6,7 +6,7 @@
 /*   By: mkettab <mkettab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 02:46:36 by mkettab           #+#    #+#             */
-/*   Updated: 2024/10/19 00:43:54 by mkettab          ###   ########.fr       */
+/*   Updated: 2024/10/23 17:46:22 by mkettab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,17 +53,18 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	char_needle = (char *)needle;
 	if (*char_needle == 0)
 		return (char_haystack);
-	if (len_needle > len_haystack)
+	if (len_needle > len_haystack || len == 0 || len < len_needle)
 		return (NULL);
 	result = verif_chars(char_haystack, char_needle, len_needle, len);
 	return (result);
 }
 
-/*int main(){
-	const char *str1 = "abcdef";
-	const char *str2 = "cdef";
+/* int main(){
+	const char *str1 = "abcdefgh";
+	const char *str2 = "abc";
 
-	const char *found = ft_strnstr(str1, str2, 3);
+	const char *found = ft_strnstr(str1, str2, 2);
 
 	printf("%s\n", found);
-}*/
+}
+ */
