@@ -6,7 +6,7 @@
 /*   By: mkettab <mkettab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 15:08:04 by mkettab           #+#    #+#             */
-/*   Updated: 2024/10/22 00:13:02 by mkettab          ###   ########.fr       */
+/*   Updated: 2024/10/24 00:48:02 by mkettab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,5 +38,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
 char	*ft_strrchr(const char *s, int c);
+void	ft_putchar_fd(char c, int fd);
+void ft_putstr_fd(char *s, int fd);
 
 #endif

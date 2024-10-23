@@ -24,7 +24,10 @@ SRCS = ft_strnstr.c \
 			 ft_calloc.c \
 			 ft_strdup.c \
 			 ft_strlcat.c \
-			 ft_strrchr.c
+			 ft_strrchr.c \
+			 ft_putchar_fd.c \
+			 ft_putstr_fd.c \
+			 ft_putendl_fd.c
 
 OBJS = $(SRCS:.c=.o)
 OBJS_DIR = obj/
@@ -35,9 +38,8 @@ NAME = libft.a
 $(OBJS_DIR)%.o: %.c libft.h
 	@mkdir -p $(OBJS_DIR)
 	@cc $(FLAGS) -c $< -o $@
-	@echo "Compiling $@"
 
-$(NAME): $(OBJS_PREF)
+$(NAME): $(OBJS_PREF) signature
 	@echo "Archive Created"
 	@ar rcs $(NAME) $(OBJS_PREF)
 
@@ -47,7 +49,7 @@ clean:
 	@rm -rf $(OBJS_DIR)
 	@echo "Removing objects.."
 
-fclean: clean
+fclean: clean signature
 	@rm -f $(NAME)
 	@echo "Cleaning.."
 
@@ -56,8 +58,28 @@ test: all $(TEST)
 	@./$(TEST:.c=)
 	@rm -rf ./$(TEST:.c=)
 
-re: fclean all
+re: fclean all signature
 
 so:
 	$(CC) -nostartfiles -fPIC $(FLAGS) $(SRCS)
 	gcc -nostartfiles -shared -o libft.so $(OBJS_PREF)
+
+signature:
+	@echo ""
+	@echo ""
+	@echo ""
+	@echo ""
+	@echo ""
+	@echo "        ,====,,'''',,,             _____________________________________"
+	@echo " _______||__||_______ ''',       /'                                    |"
+	@echo "|    | |      | |    |    ;    /'  Name: ____Kurygan (mkettab)________ |"
+	@echo "|   CMIYGL    | |    |   ;   / o   Address: __mkettab@student.42.fr___ |"
+	@echo "|    | |      | |    |    '''\     School: ______42_Mulhouse__________ |"
+	@echo "|    | |      IGOR   |        \`\          __CALL_ME_IF_YOU_GET_LOST___ |"
+	@echo "|  OFWGKTA    | |    |          \`\.____________________________________|"
+	@echo "|____|_|______|_|____|"
+	@echo ""
+	@echo ""
+	@echo ""
+	@echo ""
+	@echo ""
