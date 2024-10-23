@@ -57,3 +57,7 @@ test: all $(TEST)
 	@rm -rf ./$(TEST:.c=)
 
 re: fclean all
+
+so:
+	$(CC) -nostartfiles -fPIC $(FLAGS) $(SRCS)
+	gcc -nostartfiles -shared -o libft.so $(OBJS_PREF)
