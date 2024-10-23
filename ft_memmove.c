@@ -6,7 +6,7 @@
 /*   By: mkettab <mkettab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/20 18:53:32 by mkettab           #+#    #+#             */
-/*   Updated: 2024/10/23 02:57:57 by mkettab          ###   ########.fr       */
+/*   Updated: 2024/10/23 03:22:29 by mkettab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	unsigned char	*ptr_dst;
 	unsigned char	*ptr_src;
-	int			i;
+	int				i;
 
 	ptr_dst = (unsigned char *)dst;
 	ptr_src = (unsigned char *)src;
