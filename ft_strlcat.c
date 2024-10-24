@@ -6,7 +6,7 @@
 /*   By: mkettab <mkettab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 19:11:09 by mkettab           #+#    #+#             */
-/*   Updated: 2024/10/23 20:58:25 by mkettab          ###   ########.fr       */
+/*   Updated: 2024/10/24 01:40:43 by mkettab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,28 +16,26 @@
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	char	*catted;
 	size_t	i;
 	size_t	j;
 	size_t	len_dst;
 	size_t	len_src;
 
-	catted = dst;
-	len_dst = ft_strlen(dst);
 	len_src = ft_strlen(src);
 	i = 0;
 	j = 0;
-	while (catted[j])
-		j++;
 	if (dstsize == 0)
+		return (len_src);
+	while (dst[j])
+		j++;
+	len_dst = ft_strlen(dst);
+	if (dstsize < len_dst)
 		return (dstsize + len_src);
 	while (src[i] && j + i < dstsize - 1)
 	{
-		catted[j + i] = src[i];
+		dst[j + i] = src[i];
 		i++;
 	}
-	catted[j + i] = 0;
-	if (dstsize < len_dst)
-		return (dstsize + len_src);
+	dst[j + i] = 0;
 	return (len_dst + len_src);
 }
