@@ -1,6 +1,6 @@
 CC = cc
 FLAGS = -Wall -Wextra -Werror
-TEST = ft_strdup.c
+TEST = ft_substr.c
 
 SRCS = ft_strnstr.c \
 			 ft_strncmp.c \
@@ -27,7 +27,8 @@ SRCS = ft_strnstr.c \
 			 ft_strrchr.c \
 			 ft_putchar_fd.c \
 			 ft_putstr_fd.c \
-			 ft_putendl_fd.c
+			 ft_putendl_fd.c \
+			 ft_substr.c
 
 OBJS = $(SRCS:.c=.o)
 OBJS_DIR = obj/
@@ -35,7 +36,7 @@ OBJS_PREF = $(addprefix $(OBJS_DIR), $(OBJS))
 
 NAME = libft.a
 
-$(OBJS_DIR)%.o: %.c libft.h
+$(OBJS_DIR)%.o: $(SRCS) libft.h
 	@mkdir -p $(OBJS_DIR)
 	@cc $(FLAGS) -c $< -o $@
 
