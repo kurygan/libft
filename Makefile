@@ -27,7 +27,8 @@ SRCS = ft_strnstr.c \
 			 ft_strrchr.c \
 			 ft_putchar_fd.c \
 			 ft_putstr_fd.c \
-			 ft_putendl_fd.c
+			 ft_putendl_fd.c \
+			 ft_substr.c
 
 OBJS = $(SRCS:.c=.o)
 OBJS_DIR = obj/
