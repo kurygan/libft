@@ -6,7 +6,7 @@
 /*   By: mkettab <mkettab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 00:46:15 by mkettab           #+#    #+#             */
-/*   Updated: 2024/10/24 00:50:55 by mkettab          ###   ########.fr       */
+/*   Updated: 2024/10/29 17:19:12 by mkettab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void ft_putstr_fd(char *s, int fd)
 {
+	if(s == NULL)
+		return ;
 	while(*s)
 	{
 		ft_putchar_fd(*s, fd);
