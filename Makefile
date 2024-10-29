@@ -1,6 +1,6 @@
 CC = cc
 FLAGS = -Wall -Wextra -Werror
-TEST = ft_strdup.c
+TEST = ft_strjoin.c
 
 SRCS = ft_strnstr.c \
 			 ft_strncmp.c \
@@ -28,7 +28,8 @@ SRCS = ft_strnstr.c \
 			 ft_putchar_fd.c \
 			 ft_putstr_fd.c \
 			 ft_putendl_fd.c \
-			 ft_substr.c
+			 ft_substr.c \
+			 ft_strjoin.c
 
 OBJS = $(SRCS:.c=.o)
 OBJS_DIR = obj/
@@ -66,6 +67,7 @@ so:
 	gcc -nostartfiles -shared -o libft.so $(OBJS_PREF)
 
 signature:
+	@clear
 	@echo ""
 	@echo ""
 	@echo ""
