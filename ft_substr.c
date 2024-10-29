@@ -6,7 +6,7 @@
 /*   By: mkettab <mkettab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 17:19:13 by mkettab           #+#    #+#             */
-/*   Updated: 2024/10/27 11:35:55 by mkettab          ###   ########.fr       */
+/*   Updated: 2024/10/29 17:07:58 by mkettab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	i = 0;
 	non_const_s = (char *)s;
-	subbed = malloc(sizeof(char) * len);
+	subbed = malloc(sizeof(char) * len + 1);
 	if(!subbed)
 		return (NULL);
 	while(i < start && *non_const_s)
