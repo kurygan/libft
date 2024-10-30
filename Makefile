@@ -38,7 +38,7 @@ OBJS_PREF = $(addprefix $(OBJS_DIR), $(OBJS))
 
 NAME = libft.a
 
-$(OBJS_PREF): $(SRCS) libft.h
+$(OBJS_DIR)%.o: %.c
 	@echo "Compiling $@"
 	@mkdir -p $(OBJS_DIR)
 	@cc $(FLAGS) -c $< -o $@
