@@ -6,9 +6,11 @@
 /*   By: mkettab <mkettab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 18:25:12 by mkettab           #+#    #+#             */
-/*   Updated: 2024/10/23 17:41:30 by mkettab          ###   ########.fr       */
+/*   Updated: 2024/10/30 19:11:11 by mkettab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_atoi(const char *str)
 {

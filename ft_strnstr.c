@@ -6,7 +6,7 @@
 /*   By: mkettab <mkettab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 02:46:36 by mkettab           #+#    #+#             */
-/*   Updated: 2024/10/24 01:47:48 by mkettab          ###   ########.fr       */
+/*   Updated: 2024/10/30 19:09:07 by mkettab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <stdio.h>
 #include "libft.h"
 
-char	*verif_chars(
+static char	*verif_chars(
 	char *haystack, char *needle,
 	size_t len_needle, size_t len)
 {

@@ -6,7 +6,7 @@
 /*   By: mkettab <mkettab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 19:16:18 by mkettab           #+#    #+#             */
-/*   Updated: 2024/10/29 21:27:01 by mkettab          ###   ########.fr       */
+/*   Updated: 2024/10/30 19:40:35 by mkettab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,9 +32,9 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	return (joined);
 }
 
-/* int main(){
+int main(){
 	char s1[] = "lorem ipsum";
 	char s2[] = "dolor sit amet";
 	char *dest = ft_strjoin(s1, s2);
 	printf("%s\n", dest);
-} */
+}

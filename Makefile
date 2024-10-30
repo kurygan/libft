@@ -1,6 +1,6 @@
 CC = cc
 FLAGS = -Wall -Wextra -Werror
-TEST = ft_strjoin.c
+TEST = ft_strtrim.c
 
 SRCS = ft_strnstr.c \
 			 ft_strncmp.c \
@@ -38,7 +38,8 @@ OBJS_PREF = $(addprefix $(OBJS_DIR), $(OBJS))
 
 NAME = libft.a
 
-$(OBJS_DIR)%.o: $(SRCS) libft.h
+$(OBJS_PREF): $(SRCS) libft.h
+	@echo "Compiling $@"
 	@mkdir -p $(OBJS_DIR)
 	@cc $(FLAGS) -c $< -o $@
 
