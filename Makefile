@@ -1,6 +1,6 @@
 CC = cc
 FLAGS = -Wall -Wextra -Werror
-TEST = ft_strtrim.c
+TEST = ft_itoa.c
 
 SRCS = ft_strnstr.c \
 			 ft_strncmp.c \
@@ -30,7 +30,8 @@ SRCS = ft_strnstr.c \
 			 ft_putendl_fd.c \
 			 ft_substr.c \
 			 ft_strjoin.c \
-			 ft_strtrim.c
+			 ft_strtrim.c \
+			 ft_itoa.c
 
 OBJS = $(SRCS:.c=.o)
 OBJS_DIR = obj/
