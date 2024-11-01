@@ -6,7 +6,7 @@
 /*   By: mkettab <mkettab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 15:08:04 by mkettab           #+#    #+#             */
-/*   Updated: 2024/10/31 19:01:18 by mkettab          ###   ########.fr       */
+/*   Updated: 2024/11/01 23:47:36 by mkettab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,5 +45,6 @@ char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_itoa(int n);
 char	**ft_split(char const *s, char c);
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 
 #endif
