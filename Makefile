@@ -33,7 +33,8 @@ SRCS = ft_strnstr.c \
 			 ft_strtrim.c \
 			 ft_itoa.c \
 			 ft_split.c \
-			 ft_strmapi.c
+			 ft_strmapi.c \
+			 ft_striteri.c
 
 OBJS = $(SRCS:.c=.o)
 OBJS_DIR = .obj/
