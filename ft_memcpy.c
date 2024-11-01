@@ -6,7 +6,7 @@
 /*   By: mkettab <mkettab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/19 01:49:04 by mkettab           #+#    #+#             */
-/*   Updated: 2024/10/21 21:21:05 by mkettab          ###   ########.fr       */
+/*   Updated: 2024/11/02 00:13:30 by mkettab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,6 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	ptr_src = (unsigned char *)src;
 	ptr_dst = (unsigned char *)dst;
 	i = 0;
-	if (ptr_src == NULL && ptr_dst == NULL)
-		return (NULL);
 	while (i < n)
 	{
 		ptr_dst[i] = ptr_src[i];
