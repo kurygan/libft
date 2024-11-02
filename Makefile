@@ -39,6 +39,7 @@ SRCS = ft_strnstr.c \
 
 SRCS_BONUS = ft_lstnew.c \
 						 ft_lstadd_front.c \
+						 ft_lstsize.c \
 						 $(SRCS) 
 
 OBJS = $(SRCS:.c=.o)
