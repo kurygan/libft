@@ -37,14 +37,14 @@ SRCS = ft_strnstr.c \
 			 ft_striteri.c \
 			 ft_putnbr_fd.c
 
-# SRCS_BONUS = 
-# 						 $(SRCS) 
+SRCS_BONUS = ft_lstnew_bonus.c \
+						 $(SRCS) 
 
 OBJS = $(SRCS:.c=.o)
-# OBJS_BONUS = $(SRCS_BONUS:.c=.o)
+OBJS_BONUS = $(SRCS_BONUS:.c=.o)
 OBJS_DIR = .obj/
 OBJS_PREF = $(addprefix $(OBJS_DIR), $(OBJS))
-# OBJS_BONUS_PREF = $(addprefix $(OBJS_DIR), $(OBJS_BONUS))
+OBJS_BONUS_PREF = $(addprefix $(OBJS_DIR), $(OBJS_BONUS))
 
 NAME = libft.a
 
@@ -59,9 +59,9 @@ $(NAME): $(OBJS_PREF) signature
 
 all: $(NAME)
 
-# bonus: $(OBJS_BONUS_PREF)
-# 	@ar rcs $(NAME) $(OBJS_BONUS_PREF)
-# 	@echo "Bonus Archive Compiled"
+bonus: $(OBJS_BONUS_PREF)
+	@ar rcs $(NAME) $(OBJS_BONUS_PREF)
+	@echo "Bonus Archive Compiled"
 
 clean:
 	@rm -rf $(OBJS_DIR)
