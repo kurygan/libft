@@ -6,7 +6,7 @@
 /*   By: mkettab <mkettab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 18:26:01 by mkettab           #+#    #+#             */
-/*   Updated: 2024/11/01 23:31:11 by mkettab          ###   ########.fr       */
+/*   Updated: 2024/11/02 01:44:56 by mkettab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,8 +54,7 @@ char	**ft_split(char const *s, char c)
 	splitted = malloc(sizeof(char *) * (ft_count_words(s, c) + 1));
 	if (!splitted)
 		return (NULL);
-	i = 0;
-	j = 0;
+	(void)0, i = 0, j = 0, start = 0;
 	while (j < ft_count_words(s, c))
 	{
 		while (s[i] && s[i] == c)

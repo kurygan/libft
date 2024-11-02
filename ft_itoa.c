@@ -6,7 +6,7 @@
 /*   By: mkettab <mkettab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 00:14:21 by mkettab           #+#    #+#             */
-/*   Updated: 2024/10/31 01:55:07 by mkettab          ###   ########.fr       */
+/*   Updated: 2024/11/02 01:47:45 by mkettab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,8 +45,7 @@ char	*ft_itoa(int n)
 	int		limits;
 	char	*dest;
 
-	limits = 0;
-	len = ft_intlen(n);
+	(void)0, len = ft_intlen(n), limits = 0;
 	dest = malloc(sizeof(char) * (len + 1));
 	if (!dest)
 		return (NULL);

@@ -6,7 +6,7 @@
 /*   By: mkettab <mkettab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 21:17:48 by mkettab           #+#    #+#             */
-/*   Updated: 2024/10/22 01:53:36 by mkettab          ###   ########.fr       */
+/*   Updated: 2024/11/02 01:48:31 by mkettab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	unsigned char	char_c;
 	size_t			i;
 
-	ptr = (unsigned char *)s;
-	char_c = (unsigned char)c;
-	i = 0;
+	(void)0, char_c = (unsigned char)c, i = 0, ptr = (unsigned char *)s;
 	while (i < n)
 	{
 		if (ptr[i] != char_c)
