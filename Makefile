@@ -37,7 +37,8 @@ SRCS = ft_strnstr.c \
 			 ft_striteri.c \
 			 ft_putnbr_fd.c
 
-SRCS_BONUS = ft_lstnew_bonus.c \
+SRCS_BONUS = ft_lstnew.c \
+						 ft_lstadd_front.c \
 						 $(SRCS) 
 
 OBJS = $(SRCS:.c=.o)
