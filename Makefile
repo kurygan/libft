@@ -42,6 +42,7 @@ SRCS_BONUS = ft_lstnew.c \
 						 ft_lstsize.c \
 						 ft_lstlast.c \
 						 ft_lstadd_back.c \
+						 ft_lstdelone.c \
 						 $(SRCS) 
 
 OBJS = $(SRCS:.c=.o)
@@ -53,7 +54,6 @@ OBJS_BONUS_PREF = $(addprefix $(OBJS_DIR), $(OBJS_BONUS))
 NAME = libft.a
 
 $(OBJS_DIR)%.o: %.c
-	@echo "Compiling $@"
 	@mkdir -p $(OBJS_DIR)
 	@cc $(FLAGS) -c $< -o $@
 
