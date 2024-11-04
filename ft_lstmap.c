@@ -6,7 +6,7 @@
 /*   By: mkettab <mkettab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 18:17:24 by mkettab           #+#    #+#             */
-/*   Updated: 2024/11/04 20:13:15 by mkettab          ###   ########.fr       */
+/*   Updated: 2024/11/04 20:18:14 by mkettab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*new_lst;
 	t_list	*new_obj;
-	void		*temp;
+	void	*temp;
 
 	if (!lst || !f || !del)
 		return (NULL);
@@ -30,7 +30,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	while (lst)
 	{
 		temp = f(lst->content);
-		if(!temp)
+		if (!temp)
 			return (free_all(new_lst, del));
 		new_obj = ft_lstnew(temp);
 		if (!new_obj)

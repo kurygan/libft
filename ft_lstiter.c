@@ -6,13 +6,13 @@
 /*   By: mkettab <mkettab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 18:04:51 by mkettab           #+#    #+#             */
-/*   Updated: 2024/11/04 18:07:05 by mkettab          ###   ########.fr       */
+/*   Updated: 2024/11/04 20:17:37 by mkettab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_lstiter(t_list *lst, void (*f)(void *))
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
 	while (lst)
 	{
