@@ -6,7 +6,7 @@
 /*   By: mkettab <mkettab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 15:08:04 by mkettab           #+#    #+#             */
-/*   Updated: 2024/11/04 14:44:24 by mkettab          ###   ########.fr       */
+/*   Updated: 2024/11/04 18:05:11 by mkettab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,5 +65,6 @@ t_list	*ft_lstlast(t_list *lst);
 void	ft_lstadd_back(t_list **lst, t_list *new);
 void ft_lstclear(t_list **lst, void (*del)(void *));
 void	ft_lstdelone(t_list *lst, void (*del)(void *));
+void ft_lstiter(t_list *lst, void (*f)(void *));
 
 #endif
