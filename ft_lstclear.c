@@ -6,7 +6,7 @@
 /*   By: mkettab <mkettab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 14:44:07 by mkettab           #+#    #+#             */
-/*   Updated: 2024/11/04 14:54:05 by mkettab          ###   ########.fr       */
+/*   Updated: 2024/11/04 19:33:01 by mkettab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void ft_lstclear(t_list **lst, void (*del)(void *))
 {
 	t_list *temp;
 	
+	if (!lst || !del)
+		return ;
 	while((*lst))
 	{
 		temp = (*lst)->next;
