@@ -1,4 +1,4 @@
-CC = cc
+CC = gcc
 FLAGS = -Wall -Wextra -Werror
 TEST = ft_itoa.c
 
@@ -45,67 +45,34 @@ SRCS_BONUS = ft_lstnew.c \
 						 ft_lstdelone.c \
 						 ft_lstclear.c \
 						 ft_lstiter.c \
-						 ft_lstmap.c \
-						 $(SRCS) 
+						 ft_lstmap.c
 
 OBJS = $(SRCS:.c=.o)
 OBJS_BONUS = $(SRCS_BONUS:.c=.o)
-OBJS_DIR = .obj/
-OBJS_PREF = $(addprefix $(OBJS_DIR), $(OBJS))
-OBJS_BONUS_PREF = $(addprefix $(OBJS_DIR), $(OBJS_BONUS))
 
 NAME = libft.a
 
-$(OBJS_DIR)%.o: %.c
-	@mkdir -p $(OBJS_DIR)
-	@cc $(FLAGS) -c $< -o $@
+.o.c:
+	@cc $(FLAGS) -c $< -o $($<.c=.o)
 
-$(NAME): $(OBJS_PREF) signature
+$(NAME): $(OBJS)
 	@echo "Archive Compiled"
-	@ar rcs $(NAME) $(OBJS_PREF)
+	@ar rcs $(NAME) $(OBJS)
 
 all: $(NAME)
 
-bonus: $(OBJS_BONUS_PREF)
-	@ar rcs $(NAME) $(OBJS_BONUS_PREF)
+bonus: $(OBJS_BONUS)
+	@ar rcs $(NAME) $(OBJS_BONUS)
 	@echo "Bonus Archive Compiled"
 
 clean:
-	@rm -rf $(OBJS_DIR)
+	@rm -rf $(OBJS) $(OBJS_BONUS)
 	@echo "Removing objects.."
 
-fclean: clean signature
+fclean: clean
 	@rm -f $(NAME)
 	@echo "Cleaning.."
 
-test: all $(TEST)
-	@cc $(FLAGS) $(TEST) libft.a -o $(TEST:.c=)
-	@./$(TEST:.c=)
-	@rm -rf ./$(TEST:.c=)
+re: fclean all
 
-re: fclean all signature
-
-so:
-	$(CC) -nostartfiles -fPIC $(FLAGS) $(SRCS)
-	gcc -nostartfiles -shared -o libft.so $(OBJS_PREF)
-
-signature:
-	@clear
-	@echo ""
-	@echo ""
-	@echo ""
-	@echo ""
-	@echo ""
-	@echo "        ,====,,'''',,,             _____________________________________"
-	@echo " _______||__||_______ ''',       /'                                    |"
-	@echo "|    | |      | |    |    ;    /'  Name: ____Kurygan (mkettab)________ |"
-	@echo "|   CMIYGL    | |    |   ;   / o   Address: __mkettab@student.42.fr___ |"
-	@echo "|    | |      | |    |    '''\     School: ______42_Mulhouse__________ |"
-	@echo "|    | |      IGOR   |        \`\          __CALL_ME_IF_YOU_GET_LOST___ |"
-	@echo "|  OFWGKTA    | |    |          \`\.____________________________________|"
-	@echo "|____|_|______|_|____|"
-	@echo ""
-	@echo ""
-	@echo ""
-	@echo ""
-	@echo ""
+.PHONY: re fclean clean bonus all

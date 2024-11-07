@@ -6,7 +6,7 @@
 /*   By: mkettab <mkettab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/02 15:48:59 by mkettab           #+#    #+#             */
-/*   Updated: 2024/11/02 20:31:00 by mkettab          ###   ########.fr       */
+/*   Updated: 2024/11/06 21:49:11 by mkettab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,8 @@ int	ft_lstsize(t_list *lst)
 	t_list	*temp;
 	int		i;
 
-	(void)0, temp = lst, i = 0;
+	temp = lst;
+	i = 0;
 	while (temp)
 	{
 		temp = temp->next;
