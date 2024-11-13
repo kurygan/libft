@@ -6,7 +6,7 @@
 /*   By: mkettab <mkettab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 18:26:01 by mkettab           #+#    #+#             */
-/*   Updated: 2024/11/02 01:44:56 by mkettab          ###   ########.fr       */
+/*   Updated: 2024/11/11 20:43:13 by mkettab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,14 +69,3 @@ char	**ft_split(char const *s, char c)
 	}
 	return (splitted[j] = NULL, splitted);
 }
-
-// int main(void)
-// {
-// 	char *str = "\0aa\0bbb";
-// 	char c = '\0';
-// 	char **split = ft_split(str, c);
-
-// 	for (int i = 0; i < ft_count_words(str, c); i++)
-// 		printf("%s\n", split[i]);
-// 	return 0;
-// }

@@ -6,7 +6,7 @@
 /*   By: mkettab <mkettab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 01:39:22 by mkettab           #+#    #+#             */
-/*   Updated: 2024/10/23 16:21:38 by mkettab          ###   ########.fr       */
+/*   Updated: 2024/11/11 20:43:41 by mkettab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,11 +29,3 @@ char	*ft_strrchr(const char *s, int c)
 		last_occ = (char *)s;
 	return (last_occ);
 }
-
-/* int main(){
-	char src[] = "bonjour";
-	char *str = ft_strrchr(src, '\0');
-
-	return EXIT_SUCCESS;
-}
- */

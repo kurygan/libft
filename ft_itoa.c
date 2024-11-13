@@ -6,7 +6,7 @@
 /*   By: mkettab <mkettab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 00:14:21 by mkettab           #+#    #+#             */
-/*   Updated: 2024/11/04 18:12:54 by mkettab          ###   ########.fr       */
+/*   Updated: 2024/11/11 20:42:15 by mkettab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ char	*ft_itoa(int n)
 	dest = malloc(sizeof(char) * (len + 1));
 	if (!dest)
 		return (NULL);
-	if (n == INT32_MIN)
+	if (n == -2147483648)
 	{
 		ft_strlcpy(dest, "-2147483648", 12);
 		return (dest);
@@ -66,8 +66,3 @@ char	*ft_itoa(int n)
 	ft_assign(n, len, limits, dest);
 	return (dest);
 }
-
-// int main(){
-// 	printf("%s\n", ft_itoa(5231));
-// 	return EXIT_SUCCESS;
-// }

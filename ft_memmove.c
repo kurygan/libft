@@ -6,7 +6,7 @@
 /*   By: mkettab <mkettab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/20 18:53:32 by mkettab           #+#    #+#             */
-/*   Updated: 2024/10/23 03:22:29 by mkettab          ###   ########.fr       */
+/*   Updated: 2024/11/11 20:42:55 by mkettab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,12 +37,3 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 		ft_memcpy(ptr_dst, ptr_src, len);
 	return (ptr_dst);
 }
-/* 
-int main(){
-	char src[] = "lorem ipsum dolor sit amet";
-	char *dest;
-	
-	dest = src + 1;
-	dest = ft_memmove(dest, "consectetur", 5);
-	return EXIT_SUCCESS;
-} */

@@ -6,7 +6,7 @@
 /*   By: mkettab <mkettab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 03:55:10 by mkettab           #+#    #+#             */
-/*   Updated: 2024/11/06 21:48:09 by mkettab          ###   ########.fr       */
+/*   Updated: 2024/11/13 02:30:45 by mkettab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@
 void	*ft_calloc(size_t count, size_t size)
 {
 	void	*calloced;
-	
-	if (((size * count) / size) != count)
+
+	if (size != 0 && ((size * count) / size) != count)
 		return (NULL);
 	calloced = malloc(count * size);
 	if (!calloced)

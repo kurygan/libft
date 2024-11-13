@@ -6,7 +6,7 @@
 /*   By: mkettab <mkettab@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 22:17:30 by mkettab           #+#    #+#             */
-/*   Updated: 2024/10/23 20:31:03 by mkettab          ###   ########.fr       */
+/*   Updated: 2024/11/11 20:43:17 by mkettab          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,10 +28,3 @@ char	*ft_strchr(const char *s, int c)
 		return (ptr);
 	return (NULL);
 }
-
-/* int main(){
-	char s[] = "tripouille";
-
-	char *dest = ft_strchr(s, 't' + 256);
-	return 0;
-} */
